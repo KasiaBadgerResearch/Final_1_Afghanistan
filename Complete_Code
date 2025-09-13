@@ -1,0 +1,69 @@
+# ==========================
+# POVERTY INDICATORS COMPARISON: AFGHANISTAN
+# ==========================
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+
+# Folders
+data_raw_folder = "data_raw/"
+data_clean_folder = "data_clean/"
+figures_folder = "figures/"
+
+# Load CSV
+filename = "afghanistan_poverty.csv"
+df = pd.read_csv(os.path.join(data_raw_folder, filename))
+
+# Keep only Afghanistan + needed columns
+df = df[df["Country Name"] == "Afghanistan"]
+df = df[["Year", "Indicator Name", "Value"]]
+
+# Convert Year and Value to numeric, drop invalid Value rows
+df["Year"] = pd.to_numeric(df["Year"], errors="coerce")
+df["Value"] = pd.to_numeric(df["Value"], errors="coerce")
+df = df.dropna(subset=["Value"])
+
+# Aggregate duplicates
+df = df.groupby(["Year", "Indicator Name"], as_index=False).mean()
+
+# Pivot indicators into separate columns
+df_pivot = df.pivot(index="Year", columns="Indicator Name", values="Value").reset_index()
+df_pivot = df_pivot.sort_values("Year")
+
+print("Pivoted dataset:")
+display(df_pivot)
+
+# Interpolate for plotting
+df_plot = df_pivot.interpolate(method='linear')
+
+# Identify the actual data ranges for each indicator
+slum_years = df_pivot.dropna(subset=["Population living in slums (% of urban population)"])["Year"]
+poverty_years = df_pivot.dropna(subset=["Poverty headcount ratio at national poverty lines (% of population)"])["Year"]
+
+# Plot two lines
+plt.figure(figsize=(10,6))
+
+# Slum population line (full range)
+plt.plot(df_plot["Year"], 
+         df_plot["Population living in slums (% of urban population)"], 
+         marker='o', label="Slum Population (% of urban population)")
+
+# Poverty headcount line (limited to actual data range)
+poverty_mask = (df_plot["Year"] >= poverty_years.min()) & (df_plot["Year"] <= poverty_years.max())
+plt.plot(df_plot["Year"][poverty_mask], 
+         df_plot["Poverty headcount ratio at national poverty lines (% of population)"][poverty_mask], 
+         marker='o', label="Poverty Headcount (% of population)")
+
+plt.title("Afghanistan: Slum Population vs Poverty Headcount")
+plt.xlabel("Year")
+plt.ylabel("Percentage of Population")
+plt.xticks([2006,2008,2010,2012,2014,2016,2018,2020,2022])
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig(os.path.join(figures_folder, "afghanistan_slums_vs_poverty_lines.png"))
+plt.show()
+
+# Save cleaned CSV (original data, no interpolation)
+df_pivot.to_csv(os.path.join(data_clean_folder, "afghanistan_slums_vs_poverty.csv"), index=False)
