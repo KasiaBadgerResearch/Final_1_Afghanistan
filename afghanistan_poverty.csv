@@ -1,0 +1,24 @@
+Country Name,Country ISO3,Year,Indicator Name,Indicator Code,Value
+#country+name,#country+code,#date+year,#indicator+name,#indicator+code,#indicator+value+num
+Afghanistan,AFG,2022,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,71.58904
+Afghanistan,AFG,2020,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,73.3
+Afghanistan,AFG,2018,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,73.3
+Afghanistan,AFG,2016,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,72.12863
+Afghanistan,AFG,2014,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,69.68829
+Afghanistan,AFG,2012,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,67.24795
+Afghanistan,AFG,2010,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,64.80761
+Afghanistan,AFG,2008,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,63.6
+Afghanistan,AFG,2006,Population living in slums (% of urban population),EN.POP.SLUM.UR.ZS,63.6
+Afghanistan,AFG,2016,Poverty headcount ratio at national poverty lines (% of population),SI.POV.NAHC,54.5
+Afghanistan,AFG,2011,Poverty headcount ratio at national poverty lines (% of population),SI.POV.NAHC,38.3
+Afghanistan,AFG,2007,Poverty headcount ratio at national poverty lines (% of population),SI.POV.NAHC,33.7
+Afghanistan,AFG,2020,Multidimensional poverty headcount ratio (% of total population),SI.POV.MDIM,49.4
+Afghanistan,AFG,2016,Multidimensional poverty headcount ratio (% of total population),SI.POV.MDIM,51.7
+Afghanistan,AFG,2020,"Multidimensional poverty headcount ratio, children (% of population ages 0-17)",SI.POV.MDIM.17,53.8
+Afghanistan,AFG,2016,"Multidimensional poverty headcount ratio, children (% of population ages 0-17)",SI.POV.MDIM.17,56.4
+Afghanistan,AFG,2020,"Multidimensional poverty index, children (population ages 0-17) (scale 0-1)",SI.POV.MDIM.17.XQ,0.29
+Afghanistan,AFG,2016,"Multidimensional poverty index, children (population ages 0-17) (scale 0-1)",SI.POV.MDIM.17.XQ,0.3
+Afghanistan,AFG,2020,Multidimensional poverty intensity (average share of deprivations experienced by the poor),SI.POV.MDIM.IT,53.6
+Afghanistan,AFG,2016,Multidimensional poverty intensity (average share of deprivations experienced by the poor),SI.POV.MDIM.IT,52.5
+Afghanistan,AFG,2020,Multidimensional poverty index (scale 0-1),SI.POV.MDIM.XQ,0.265
+Afghanistan,AFG,2016,Multidimensional poverty index (scale 0-1),SI.POV.MDIM.XQ,0.27
