@@ -1,8 +1,8 @@
-# Does Urbanization Drive Changes in Poverty in Afghanistan (2006–2022)?
+# Does urbanization drive changes in poverty in Afghanistan between 2006 and 2022?
 
 ## Abstract
 
-This project examines the relationship between urbanization and poverty in Afghanistan from 2006 to 2022. Using World Bank World Development Indicators, urbanization is proxied by the share of the urban population living in slums, while poverty is measured by the national poverty headcount ratio. Both indicators increased over the period, with the slum population showing a slight downturn in recent years and poverty headcount rising sharply and consistently. These descriptive trends suggest that urbanization pressures may be associated with poverty dynamics, though the results remain correlational. The findings highlight the need for additional indicators and regional data to better understand the complex interplay between urban growth and poverty reduction.
+Urbanization and poverty are closely linked in fragile contexts, yet their dynamics in Afghanistan remain understudied. This study examines changes in slum population (% of urban population) and national poverty headcount ratio between 2006 and 2022 using World Bank World Development Indicators. Both indicators increased over the period, with slum population showing a slight downturn in recent years while poverty headcount rose sharply and consistently. These descriptive trends suggest that urbanization pressures may be associated with poverty dynamics, though the results remain correlational. The findings highlight the need for additional indicators and regional data to better understand the complex interplay between urban growth and poverty reduction.
 
 ## 1. Question
 
